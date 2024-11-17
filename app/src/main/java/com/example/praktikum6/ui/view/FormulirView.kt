@@ -39,7 +39,7 @@ fun FormulirView(
     var alamat by remember { mutableStateOf("") }
     var jenisK by remember { mutableStateOf("")}
     var nim by remember { mutableStateOf(" ")}
-    var listData : MutableList<String> = mutableListOf(nama, jenisK, alamat)
+    var listData : MutableList<String> = mutableListOf(nama, jenisK, alamat, email, noHp, nim)
 
     Column(
         modifier = modifier
@@ -66,7 +66,7 @@ fun FormulirView(
                 Text("Masukkan Nama Anda")
             }
         )
-        Row {
+        Row (modifier = Modifier.fillMaxWidth()){
             pilihanJK.forEach() { selectedJK ->
                 Row (verticalAlignment = Alignment.CenterVertically) {
                     RadioButton(selected = jenisK == selectedJK,
@@ -129,7 +129,7 @@ fun FormulirView(
                 .fillMaxWidth()
                 .padding(5.dp),
             label = { Text ("NIM")},
-            placeholder = {Text ("Masukkan NIM anda")},
+            placeholder = { Text("Masukkan NIM anda")},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
         )
 

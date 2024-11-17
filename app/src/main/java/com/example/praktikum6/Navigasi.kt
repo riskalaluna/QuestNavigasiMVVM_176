@@ -42,11 +42,11 @@ fun Navigasi (
             composable(route = Halaman.Form.name){
                 val konteks = LocalContext.current
                 FormulirView(
-                    pilihanJK = DataJK.isiJK.map{
-                        isi -> konteks.resources.getString(isi)
+                    pilihanJK = DataJK.isiJK.map{ isi ->
+                        konteks.resources.getString(isi)
                     },
-                    onClickButton = {
-                        viewModel.saveDataMahasiswa(it)
+                    onClickButton = { listData ->
+                        viewModel.saveDataMahasiswa(listData)
                         navHost.navigate(Halaman.Data.name)
                     }
                 )
