@@ -131,7 +131,6 @@ fun FormulirView(
             label = { Text ("NIM")},
             placeholder = {Text ("Masukkan NIM anda")},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
-
         )
 
         Button(onClick = {
