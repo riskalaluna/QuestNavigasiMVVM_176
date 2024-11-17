@@ -129,6 +129,8 @@ fun FormulirView(
                 .fillMaxWidth()
                 .padding(5.dp),
             label = { Text ("NIM")},
+            placeholder = {Text ("Masukkan NIM anda")},
+
         )
 
         Button(onClick = {
