@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -19,7 +20,14 @@ fun TampilMahasiswaView(
     navController: NavHostController
 
 ) {
-    Column (modifier = Modifier.fillMaxSize()){
+    Column (modifier = Modifier
+        .fillMaxSize()
+        .padding(16.dp)){
+
+        Button(onClick = {navController.popBackStack()}) {
+            Text("Kembali")
+        }
+
         TampilData(
             judul = "Nama",
             isinya = mhs.nama
