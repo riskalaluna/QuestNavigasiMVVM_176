@@ -124,7 +124,10 @@ fun FormulirView(
 
         TextField(
             value = nim,
-            onValueChange = { nim = it }
+            onValueChange = { nim = it },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(5.dp),
         )
 
         Button(onClick = {
