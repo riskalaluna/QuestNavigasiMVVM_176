@@ -92,6 +92,7 @@ fun FormulirView(
             },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email)
         )
+
         TextField(
             value = noHp,
             onValueChange = { noHp = it },
@@ -106,6 +107,7 @@ fun FormulirView(
             },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
         )
+
         TextField(
             value = alamat,
             onValueChange = { alamat = it },
@@ -118,8 +120,13 @@ fun FormulirView(
             placeholder = {
                 Text("Masukkan Alamat Anda")
             }
-
         )
+
+        TextField(
+            value = nim,
+            onValueChange = { nim = it }
+        )
+
         Button(onClick = {
             onClickButton(listData)
         }, modifier = Modifier.padding(vertical = 10.dp)) {
