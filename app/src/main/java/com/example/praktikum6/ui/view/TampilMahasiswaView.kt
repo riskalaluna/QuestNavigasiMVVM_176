@@ -41,7 +41,7 @@ fun TampilMahasiswaView(
         )
         TampilData(
             judul = "Email",
-            isinya = mhs.
+            isinya = mhs.email
         )
         TampilData(
             judul = "Alamat",
