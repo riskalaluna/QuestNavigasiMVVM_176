@@ -130,6 +130,7 @@ fun FormulirView(
                 .padding(5.dp),
             label = { Text ("NIM")},
             placeholder = {Text ("Masukkan NIM anda")},
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
 
         )
 
