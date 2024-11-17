@@ -35,7 +35,8 @@ fun Navigasi (
 
         NavHost(
             modifier = modifier.padding(isipadding),
-            navController = navHost, startDestination = Halaman.Form.name
+            navController = navHost,
+            startDestination = Halaman.Form.name
         ) {
 
             composable(route = Halaman.Form.name){
@@ -52,7 +53,8 @@ fun Navigasi (
             }
             composable(route = Halaman.Data.name) {
                 TampilMahasiswaView(
-                    mhs = uiState
+                    mhs = uiState,
+                    navController = navHost
                 )
             }
         }
