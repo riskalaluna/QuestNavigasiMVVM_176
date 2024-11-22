@@ -39,7 +39,7 @@ fun FormulirView(
     var alamat by remember { mutableStateOf("") }
     var jenisK by remember { mutableStateOf("")}
     var nim by remember { mutableStateOf(" ")}
-    var listData : MutableList<String> = mutableListOf(nama, jenisK, alamat, email, noHp, nim)
+    var listData : MutableList<String> = mutableListOf(nama, jenisK, email, noHp, alamat, nim)
 
     Column(
         modifier = modifier
